@@ -5,10 +5,14 @@
 ```bash
 npm init
 ```
-  
-3. Install the dependences TypeScript:
+2. Install dependences:
 ```bash
-npm install typescript ts-node @types/node @types/express nodemon -D
+npm install express mongoose cors
+```
+  
+4. Install the dependences TypeScript and dev-dependences:
+```bash
+npm install typescript ts-node @types/node @types/express nodemon dotenv -D
 ```
      
 5. Create document tsconfig.json in root:
@@ -38,3 +42,11 @@ npm install typescript ts-node @types/node @types/express nodemon -D
 7. Organization the files:
     - ![image](https://github.com/user-attachments/assets/3b9c0284-3265-4ebb-9ded-5bf52f46fd56)
 
+8. Create document vercel.json in root:
+```json
+{"version": 2,
+  "builds": [{"src": "src/index.ts",
+    "use": "@vercel/node"}],
+  "routes": [{"src": "/(.*)",
+    "dest": "src/index.ts"}]}
+```
