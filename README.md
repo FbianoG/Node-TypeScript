@@ -50,3 +50,7 @@ npm install typescript ts-node @types/node @types/express nodemon dotenv -D
   "routes": [{"src": "/(.*)",
     "dest": "src/index.ts"}]}
 ```
+9. Configurar Banco de Dados para teste (Opcional)
+```
+mongodb+srv://teste:123@cluster0.s1parrs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+```
